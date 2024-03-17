@@ -4,7 +4,16 @@ class Solution:
         nums_len = len(nums)
         triplets = []
 
-        for i in range(nums_len):
+        # approach used
+        '''
+            fixing the one value
+            and finding sum of any other(two sum) to 
+            find the opposite of the above fixed value.
+
+            n1 + n2 + n3 == 0
+        '''
+        
+        for i in range(nums_len-2): # prevents unnecessary iterations
             if i > 0 and nums[i] == nums[i - 1]:
                 continue  # Skip duplicates 
 
