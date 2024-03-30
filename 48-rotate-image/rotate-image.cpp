@@ -4,18 +4,15 @@
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
-         int n = matrix.size();
-        
-        // Take a tranpose of the matrix
-        for(int i=0; i<n; i++){
-            for(int j=i+1; j<n; j++){
-                swap(matrix[i][j], matrix[j][i]);
-            }
-        }
-        
-        // Reverse each row of the matrix to get the output
-        for(int i=0; i<n; i++){
-            reverse(matrix[i].begin(), end(matrix[i]));
-        }
+         int N=matrix.size();
+		//transpose of matrix
+        for (int i = 0; i < N; i++) 
+			for (int j = i+1; j < N; j++) 
+				swap(matrix[i][j], matrix[j][i]);
+                
+		//swap elements of each rows 
+        for (int i = 0; i < N; i++) 
+			for (int j = 0, k = N - 1;j < k; j++, k--) 
+				swap(matrix[i][j], matrix[i][k]); 
     }
 };
