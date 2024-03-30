@@ -1,3 +1,6 @@
+// swap[ basically transpose of a matrix ]
+// Finally reverse each array of the matrix
+
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
